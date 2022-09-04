@@ -158,13 +158,13 @@ function Home() {
                                                 onKeyDown={handleListKeyDown}
                                             >
                                                 <MenuItem sx={{ fontFamily: 'Montserrat', fontSize: '16px', lineHeight: '19.5px', fontWeight: 500, color: '#413C58' }} onClick={(e) => handleClose(e, 'Tokenomeme')}>Tokenomeme</MenuItem>
-                                                <MenuItem sx={{ fontFamily: 'Montserrat', fontSize: '16px', lineHeight: '19.5px', fontWeight: 500, color: '#413C58' }} onClick={(e) => handleClose(e, 'Tokenomeme')}>Laugh-To-Earn</MenuItem>
-                                                <MenuItem sx={{ fontFamily: 'Montserrat', fontSize: '16px', lineHeight: '19.5px', fontWeight: 500, color: '#413C58' }} onClick={(e) => handleClose(e, 'Tokenomeme')}>Multichain Meme Coin</MenuItem>
-                                                <MenuItem sx={{ fontFamily: 'Montserrat', fontSize: '16px', lineHeight: '19.5px', fontWeight: 500, color: '#413C58' }} onClick={(e) => handleClose(e, 'Tokenomeme')}>Multichain Troll Dao </MenuItem>
-                                                <MenuItem sx={{ fontFamily: 'Montserrat', fontSize: '16px', lineHeight: '19.5px', fontWeight: 500, color: '#413C58' }} onClick={(e) => handleClose(e, 'Tokenomeme')}>Meme NFT Marketplace </MenuItem>
-                                                <MenuItem sx={{ fontFamily: 'Montserrat', fontSize: '16px', lineHeight: '19.5px', fontWeight: 500, color: '#413C58' }} onClick={(e) => handleClose(e, 'Tokenomeme')}>Memeology420</MenuItem>
-                                                <MenuItem sx={{ fontFamily: 'Montserrat', fontSize: '16px', lineHeight: '19.5px', fontWeight: 500, color: '#413C58' }} onClick={(e) => handleClose(e, 'Tokenomeme')}>Video Presentation</MenuItem>
-                                                <MenuItem sx={{ fontFamily: 'Montserrat', fontSize: '16px', lineHeight: '19.5px', fontWeight: 500, color: '#413C58' }} onClick={(e) => handleClose(e, 'Tokenomeme')}>Chinkies NFT collection</MenuItem>
+                                                <MenuItem sx={{ fontFamily: 'Montserrat', fontSize: '16px', lineHeight: '19.5px', fontWeight: 500, color: '#413C58' }} onClick={(e) => handleClose(e, '')}>Laugh-To-Earn</MenuItem>
+                                                <MenuItem sx={{ fontFamily: 'Montserrat', fontSize: '16px', lineHeight: '19.5px', fontWeight: 500, color: '#413C58' }} onClick={(e) => handleClose(e, '')}>Multichain Meme Coin</MenuItem>
+                                                <MenuItem sx={{ fontFamily: 'Montserrat', fontSize: '16px', lineHeight: '19.5px', fontWeight: 500, color: '#413C58' }} onClick={(e) => handleClose(e, '')}>Multichain Troll Dao </MenuItem>
+                                                <MenuItem sx={{ fontFamily: 'Montserrat', fontSize: '16px', lineHeight: '19.5px', fontWeight: 500, color: '#413C58' }} onClick={(e) => handleClose(e, '')}>Meme NFT Marketplace </MenuItem>
+                                                <MenuItem sx={{ fontFamily: 'Montserrat', fontSize: '16px', lineHeight: '19.5px', fontWeight: 500, color: '#413C58' }} onClick={(e) => handleClose(e, '')}>Memeology420</MenuItem>
+                                                <MenuItem sx={{ fontFamily: 'Montserrat', fontSize: '16px', lineHeight: '19.5px', fontWeight: 500, color: '#413C58' }} onClick={(e) => handleClose(e, '')}>Video Presentation</MenuItem>
+                                                <MenuItem sx={{ fontFamily: 'Montserrat', fontSize: '16px', lineHeight: '19.5px', fontWeight: 500, color: '#413C58' }} onClick={(e) => handleClose(e, '')}>Chinkies NFT collection</MenuItem>
                                             </MenuList>
                                         </ClickAwayListener>
                                     </Paper>
