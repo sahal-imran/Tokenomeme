@@ -29,15 +29,13 @@ a {
   background-position: center;
   background-repeat: no-repeat;
 }
-/* .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation24.MuiDialog-paper.MuiDialog-paperScrollPaper.MuiDialog-paperWidthSm.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
-  background: transparent;
-  border-radius: 14px;
-  box-shadow: unset !important;
-  border: double 4px transparent;
-  border-radius: 12px;
+
+.css-10i5nbl-MuiPaper-root-MuiDialog-paper{
+  border-radius: 14px !important;
+  border: double 4px transparent !important;
   background-image: linear-gradient(#25273e, #25273e),
-    linear-gradient(to right top, #823aff, #ffe500, #fb8e00);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-  overflow: hidden;
-} */
+    linear-gradient(to right top, #823aff, #ffe500, #fb8e00) !important;
+  background-origin: border-box !important;
+  background-clip: padding-box, border-box !important;
+  overflow: hidden !important;
+}
