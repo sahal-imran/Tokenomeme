@@ -223,8 +223,9 @@ function Home() {
                 keepMounted
                 onClose={handleCloseTokenomeme}
                 aria-describedby="alert-dialog-slide-description"
+                maxWidth="lg"
             >
-                <Box id='Tokenomeme' sx={{ width: '100%', height: '636px', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }} >
+                <Box id='Tokenomeme' sx={{ width: '1141px', height: '636px', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }} >
                     {/* cross button */}
                     <IconButton onClick={handleCloseTokenomeme} aria-label="CloseIcon" sx={{ position: 'absolute', right: '6px', top: '6px' }} >
                         <CloseIcon sx={{ color: '#211E1E', fontSize: '24px' }} />
