@@ -66,13 +66,28 @@ function Meme_NFT_Marketplace({ Meme_NFT_Marketplace, setMeme_NFT_Marketplace })
                             Turn each meme into collectible laugh. Sell your house to acquire the NFT of<br />your favorite meme. Then share your happiness in the street
                         </Typography>
 
-                        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', my: 2 }} >
-                            <Image src={'/svg/memeNFTmarketplace_gif 1.svg'} width={272} height={363} objectFit='contain' />
+                        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', mt: 2 }} >
+                            <Image src={'/svg/memeNFTmarketplace_gif 1.svg'} width={240} height={340} objectFit='contain' />
                         </Box>
 
-                        <AnchorLink sx={{ color: '#FB8E00', fontFamily: 'Lato', fontSize: '22px', lineHeight: '135%', fontWeight: 900, textTransform: 'capitalize', cursor: 'pointer', textDecorationColor: '#FB8E00',mt:2 }} >
+                        <AnchorLink href='' sx={{ color: '#FB8E00', fontFamily: 'Lato', fontSize: '22px', lineHeight: '135%', fontWeight: 900, textTransform: 'capitalize', cursor: 'pointer', textDecorationColor: '#FB8E00', mt: 2 }} >
                             Find out more
                         </AnchorLink>
+
+                        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center',mt:2 }} >
+                            <AnchorLink href='' sx={{ cursor: 'pointer', textDecorationColor: '#FB8E00', mr: 1 }} >
+                                <Image src={'/Social_Icons/twitter.svg'} width={54} height={54} objectFit='contain' />
+                            </AnchorLink>
+                            <AnchorLink href='' sx={{ cursor: 'pointer', textDecorationColor: '#FB8E00', mr: 1 }} >
+                                <Image src={'/Social_Icons/opensea.svg'} width={54} height={54} objectFit='contain' />
+                            </AnchorLink>
+                            <AnchorLink href='' sx={{ cursor: 'pointer', textDecorationColor: '#FB8E00', mr: 1 }} >
+                                <Image src={'/Social_Icons/telegram.svg'} width={54} height={54} objectFit='contain' />
+                            </AnchorLink>
+                            <AnchorLink href='' sx={{ cursor: 'pointer', textDecorationColor: '#FB8E00', mr: 1 }} >
+                                <Image src={'/Social_Icons/discord.svg'} width={54} height={54} objectFit='contain' />
+                            </AnchorLink>
+                        </Box>
 
                     </Box>
                 </Box>

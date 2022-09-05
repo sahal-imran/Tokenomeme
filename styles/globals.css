@@ -21,7 +21,9 @@ a {
 #Laugh_To_Earn,
 #Multichain_Meme_Coin,
 #Multichain_Troll_Dao,
-#Meme_NFT_Marketplace {
+#Meme_NFT_Marketplace,
+#Memeology420,
+#Video_Presentation {
   background-image: url("/backgrounds/Tokenomeme.jpg");
   background-size: 100% 100%;
   background-position: center;
@@ -38,6 +40,12 @@ a {
 }
 #Meme_NFT_Marketplace {
   background-image: url("/backgrounds/Meme_NFT_Marketplace.jpg");
+}
+#Memeology420 {
+  background-image: url("/backgrounds/Memeology420.jpg");
+}
+#Video_Presentation {
+  background-image: url("/backgrounds/Video_Presentation.png");
 }
 #Tablet {
   background-image: url("/backgrounds/tablet.jpg");
@@ -59,11 +67,28 @@ a {
 .FlipCard {
   border-radius: 4px !important;
   border: double 3px transparent !important;
-  background-image: linear-gradient(white, white),
+  background-image: linear-gradient(
+      rgb(255, 255, 255),
+      rgb(255, 255, 255)
+    ),
     linear-gradient(to right top, #823aff, #ffe500, #fb8e00) !important;
   background-origin: border-box !important;
   background-clip: padding-box, border-box !important;
 }
 .FlipCard {
-  border-radius: 9px !important;
+  border-radius: 4px !important;
+}
+.FlipCardBGTransparent {
+  background-image: linear-gradient(
+      rgb(255, 255, 255, 0),
+      rgb(255, 255, 255, 0)
+    ),
+    linear-gradient(to right top, #823aff, #ffe500, #fb8e00) !important;
+}
+.GradientText {
+  font-size: 35px;
+  font-weight: 800;
+  background: -webkit-linear-gradient(236.69deg, #fb8e00 6.11%, #823aff 97.1%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

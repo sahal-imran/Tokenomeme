@@ -16,6 +16,8 @@ import Laugh_To_EarnDialog from '../Dialogs/Laugh-To-Earn';
 import Multichain_Meme_Coin_Dialog from '../Dialogs/Multichain_Meme_Coin';
 import Multichain_Troll_Dao_Dialog from '../Dialogs/Multichain_Troll_Dao';
 import Meme_NFT_Marketplace_Dialog from '../Dialogs/Meme_NFT_Marketplace';
+import Memeology420_Dialog from '../Dialogs/Memeology420';
+import Video_Presentation_Dialog from '../Dialogs/Video_Presentation';
 
 
 function Home() {
@@ -46,6 +48,12 @@ function Home() {
                 break
             case 'Meme_NFT_Marketplace':
                 handleClickMeme_NFT_Marketplace();
+                break
+            case 'Memeology':
+                handleClickMemeology420();
+                break
+            case 'Video_Presentation':
+                handleClickVideo_Presentation();
                 break
 
             default:
@@ -99,6 +107,15 @@ function Home() {
         setMeme_NFT_Marketplace(true);
     };
 
+    const [Memeology420, setMemeology420] = React.useState(false);
+    const handleClickMemeology420 = () => {
+        setMemeology420(true);
+    };
+
+    const [Video_Presentation, setVideo_Presentation] = React.useState(false);
+    const handleClickVideo_Presentation = () => {
+        setVideo_Presentation(true);
+    };
 
     return (
         <>
@@ -148,8 +165,8 @@ function Home() {
                                                 <MenuItem sx={{ fontFamily: 'Montserrat', fontSize: '16px', lineHeight: '19.5px', fontWeight: 500, color: '#413C58' }} onClick={(e) => handleClose(e, 'Multichain_Meme_Coin')}>Multichain Meme Coin</MenuItem>
                                                 <MenuItem sx={{ fontFamily: 'Montserrat', fontSize: '16px', lineHeight: '19.5px', fontWeight: 500, color: '#413C58' }} onClick={(e) => handleClose(e, 'Multichain_Troll_Dao')}>Multichain Troll Dao </MenuItem>
                                                 <MenuItem sx={{ fontFamily: 'Montserrat', fontSize: '16px', lineHeight: '19.5px', fontWeight: 500, color: '#413C58' }} onClick={(e) => handleClose(e, 'Meme_NFT_Marketplace')}>Meme NFT Marketplace </MenuItem>
-                                                <MenuItem sx={{ fontFamily: 'Montserrat', fontSize: '16px', lineHeight: '19.5px', fontWeight: 500, color: '#413C58' }} onClick={(e) => handleClose(e, '')}>Memeology420</MenuItem>
-                                                <MenuItem sx={{ fontFamily: 'Montserrat', fontSize: '16px', lineHeight: '19.5px', fontWeight: 500, color: '#413C58' }} onClick={(e) => handleClose(e, '')}>Video Presentation</MenuItem>
+                                                <MenuItem sx={{ fontFamily: 'Montserrat', fontSize: '16px', lineHeight: '19.5px', fontWeight: 500, color: '#413C58' }} onClick={(e) => handleClose(e, 'Memeology')}>Memeology420</MenuItem>
+                                                <MenuItem sx={{ fontFamily: 'Montserrat', fontSize: '16px', lineHeight: '19.5px', fontWeight: 500, color: '#413C58' }} onClick={(e) => handleClose(e, 'Video_Presentation')}>Video Presentation</MenuItem>
                                                 <MenuItem sx={{ fontFamily: 'Montserrat', fontSize: '16px', lineHeight: '19.5px', fontWeight: 500, color: '#413C58' }} onClick={(e) => handleClose(e, '')}>Chinkies NFT collection</MenuItem>
                                             </MenuList>
                                         </ClickAwayListener>
@@ -208,6 +225,9 @@ function Home() {
             <Multichain_Meme_Coin_Dialog Multichain_Meme_Coin={Multichain_Meme_Coin} setMultichain_Meme_Coin={setMultichain_Meme_Coin} />
             <Multichain_Troll_Dao_Dialog Multichain_Troll_Dao={Multichain_Troll_Dao} setMultichain_Troll_Dao={setMultichain_Troll_Dao} />
             <Meme_NFT_Marketplace_Dialog Meme_NFT_Marketplace={Meme_NFT_Marketplace} setMeme_NFT_Marketplace={setMeme_NFT_Marketplace} />
+            <Memeology420_Dialog Memeology420={Memeology420} setMemeology420={setMemeology420} />
+            <Video_Presentation_Dialog Video_Presentation={Video_Presentation} setVideo_Presentation={setVideo_Presentation} />
+
         </>
     )
 }

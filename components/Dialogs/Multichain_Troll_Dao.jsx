@@ -17,45 +17,6 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 function Multichain_Troll_Dao({ Multichain_Troll_Dao, setMultichain_Troll_Dao }) {
 
-
-    const [Flip_Eth_Card, Set_Flip_Eth_Card] = useState(false);
-    const [Flip_Tron_Card, Set_Flip_Tron_Card] = useState(false);
-    const [Flip_Polygon_Card, Set_Flip_Polygon_Card] = useState(false);
-    const [Flip_BNB_Card, Set_Flip_BNB_Card] = useState(false);
-
-
-    const Click_Eth_Card = () => {
-        Set_Flip_Eth_Card(true);
-        Set_Flip_Tron_Card(false);
-        Set_Flip_Polygon_Card(false);
-        Set_Flip_BNB_Card(false);
-    }
-    const Click_Tron_Card = () => {
-        Set_Flip_Eth_Card(false);
-        Set_Flip_Tron_Card(true);
-        Set_Flip_Polygon_Card(false);
-        Set_Flip_BNB_Card(false);
-    }
-    const Click_Polygon_Card = () => {
-        Set_Flip_Eth_Card(false);
-        Set_Flip_Tron_Card(false);
-        Set_Flip_Polygon_Card(true);
-        Set_Flip_BNB_Card(false);
-    }
-    const Click_BNB_Card = () => {
-        Set_Flip_Eth_Card(false);
-        Set_Flip_Tron_Card(false);
-        Set_Flip_Polygon_Card(false);
-        Set_Flip_BNB_Card(true);
-    }
-    const Back = () => {
-        Set_Flip_Eth_Card(false);
-        Set_Flip_Tron_Card(false);
-        Set_Flip_Polygon_Card(false);
-        Set_Flip_BNB_Card(false);
-    }
-
-
     return (
         <>
             <Dialog
@@ -101,80 +62,44 @@ function Multichain_Troll_Dao({ Multichain_Troll_Dao, setMultichain_Troll_Dao })
                         <Box sx={{ flexGrow: 1, width: '80%', mt: 8, maxHeight: { md: '300px' } }}>
                             <Grid container columnSpacing={{ md: 2 }} rowSpacing={{ md: 0, xs: 4 }}>
                                 <Grid item xs={12} md={3}>
-                                    {
-                                        !Flip_Eth_Card &&
-                                        <Box onClick={Click_Eth_Card} sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', cursor: 'pointer', transition: 'all 0.3s ease', "&:hover div": { transform: 'translateY(-10px)' } }} >
-                                            <Box className='FlipCard' sx={{ width: '100%', height: '216px', position: 'relative', overflow: 'hidden', transition: 'all 0.3s ease', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.15)', display: 'flex', justifyContent: 'center', alignItems: 'center', transition: 'all 0.3s ease' }} >
-                                                <Image src={'/coins/eth.svg'} width={105} height={171} objectFit='contain' />
-                                            </Box>
-                                            <Typography variant='h3' sx={{ fontFamily: 'Montserrat', fontSize: '24px', lineHeight: '29.26px', fontWeight: 700, color: '#413C58', textAlign: 'center', mt: 2 }} >
-                                                Ethereum
-                                            </Typography>
+                                    <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', cursor: 'pointer', transition: 'all 0.3s ease', "&:hover div": { transform: 'translateY(-10px)' } }} >
+                                        <Box className='FlipCard' sx={{ width: '100%', height: '216px', position: 'relative', overflow: 'hidden', transition: 'all 0.3s ease', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.15)', display: 'flex', justifyContent: 'center', alignItems: 'center', transition: 'all 0.3s ease' }} >
+                                            <Image src={'/coins/eth.svg'} width={105} height={171} objectFit='contain' />
                                         </Box>
-                                    }
-                                    {
-                                        Flip_Eth_Card &&
-                                        <Box onClick={Back} sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', cursor: 'pointer', transition: 'all 0.3s ease', height: '100px' }} >
-
-                                        </Box>
-                                    }
+                                        <Typography variant='h3' sx={{ fontFamily: 'Montserrat', fontSize: '24px', lineHeight: '29.26px', fontWeight: 700, color: '#413C58', textAlign: 'center', mt: 2 }} >
+                                            Ethereum
+                                        </Typography>
+                                    </Box>
                                 </Grid>
                                 <Grid item xs={12} md={3}>
-                                    {
-                                        !Flip_Tron_Card &&
-                                        <Box onClick={Click_Tron_Card} sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', cursor: 'pointer', transition: 'all 0.3s ease', "&:hover div": { transform: 'translateY(-10px)' } }} >
-                                            <Box className='FlipCard' sx={{ width: '100%', height: '216px', position: 'relative', overflow: 'hidden', transition: 'all 0.3s ease', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.15)', display: 'flex', justifyContent: 'center', alignItems: 'center', transition: 'all 0.3s ease' }} >
-                                                <Image src={'/coins/tron.svg'} width={105} height={171} objectFit='contain' />
-                                            </Box>
-                                            <Typography variant='h3' sx={{ fontFamily: 'Montserrat', fontSize: '24px', lineHeight: '29.26px', fontWeight: 700, color: '#413C58', textAlign: 'center', mt: 2 }} >
-                                                Tron
-                                            </Typography>
+                                    <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', cursor: 'pointer', transition: 'all 0.3s ease', "&:hover div": { transform: 'translateY(-10px)' } }} >
+                                        <Box className='FlipCard' sx={{ width: '100%', height: '216px', position: 'relative', overflow: 'hidden', transition: 'all 0.3s ease', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.15)', display: 'flex', justifyContent: 'center', alignItems: 'center', transition: 'all 0.3s ease' }} >
+                                            <Image src={'/coins/tron.svg'} width={105} height={171} objectFit='contain' />
                                         </Box>
-                                    }
-                                    {
-                                        Flip_Tron_Card &&
-                                        <Box onClick={Back} sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', cursor: 'pointer', transition: 'all 0.3s ease', height: '100px' }} >
-
-                                        </Box>
-                                    }
+                                        <Typography variant='h3' sx={{ fontFamily: 'Montserrat', fontSize: '24px', lineHeight: '29.26px', fontWeight: 700, color: '#413C58', textAlign: 'center', mt: 2 }} >
+                                            Tron
+                                        </Typography>
+                                    </Box>
                                 </Grid>
                                 <Grid item xs={12} md={3}>
-                                    {
-                                        !Flip_Polygon_Card &&
-                                        <Box onClick={Click_Polygon_Card} sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', cursor: 'pointer', transition: 'all 0.3s ease', "&:hover div": { transform: 'translateY(-10px)' } }} >
-                                            <Box className='FlipCard' sx={{ width: '100%', height: '216px', position: 'relative', overflow: 'hidden', transition: 'all 0.3s ease', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.15)', display: 'flex', justifyContent: 'center', alignItems: 'center', transition: 'all 0.3s ease' }} >
-                                                <Image src={'/coins/polygon.svg'} width={105} height={171} objectFit='contain' />
-                                            </Box>
-                                            <Typography variant='h3' sx={{ fontFamily: 'Montserrat', fontSize: '24px', lineHeight: '29.26px', fontWeight: 700, color: '#413C58', textAlign: 'center', mt: 2, textTransform: 'capitalize' }} >
-                                                polygon
-                                            </Typography>
+                                    <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', cursor: 'pointer', transition: 'all 0.3s ease', "&:hover div": { transform: 'translateY(-10px)' } }} >
+                                        <Box className='FlipCard' sx={{ width: '100%', height: '216px', position: 'relative', overflow: 'hidden', transition: 'all 0.3s ease', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.15)', display: 'flex', justifyContent: 'center', alignItems: 'center', transition: 'all 0.3s ease' }} >
+                                            <Image src={'/coins/polygon.svg'} width={105} height={171} objectFit='contain' />
                                         </Box>
-                                    }
-                                    {
-                                        Flip_Polygon_Card &&
-                                        <Box onClick={Back} sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', cursor: 'pointer', transition: 'all 0.3s ease', height: '100px' }} >
-
-                                        </Box>
-                                    }
+                                        <Typography variant='h3' sx={{ fontFamily: 'Montserrat', fontSize: '24px', lineHeight: '29.26px', fontWeight: 700, color: '#413C58', textAlign: 'center', mt: 2, textTransform: 'capitalize' }} >
+                                            polygon
+                                        </Typography>
+                                    </Box>
                                 </Grid>
                                 <Grid item xs={12} md={3}>
-                                    {
-                                        !Flip_BNB_Card &&
-                                        <Box onClick={Click_BNB_Card} sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', cursor: 'pointer', transition: 'all 0.3s ease', "&:hover div": { transform: 'translateY(-10px)' } }} >
-                                            <Box className='FlipCard' sx={{ width: '100%', height: '216px', position: 'relative', overflow: 'hidden', transition: 'all 0.3s ease', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.15)', display: 'flex', justifyContent: 'center', alignItems: 'center', transition: 'all 0.3s ease' }} >
-                                                <Image src={'/coins/binance.svg'} width={105} height={171} objectFit='contain' />
-                                            </Box>
-                                            <Typography variant='h3' sx={{ fontFamily: 'Montserrat', fontSize: '24px', lineHeight: '29.26px', fontWeight: 700, color: '#413C58', textAlign: 'center', mt: 2 }} >
-                                                BNBchain
-                                            </Typography>
+                                    <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', cursor: 'pointer', transition: 'all 0.3s ease', "&:hover div": { transform: 'translateY(-10px)' } }} >
+                                        <Box className='FlipCard' sx={{ width: '100%', height: '216px', position: 'relative', overflow: 'hidden', transition: 'all 0.3s ease', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.15)', display: 'flex', justifyContent: 'center', alignItems: 'center', transition: 'all 0.3s ease' }} >
+                                            <Image src={'/coins/binance.svg'} width={105} height={171} objectFit='contain' />
                                         </Box>
-                                    }
-                                    {
-                                        Flip_BNB_Card &&
-                                        <Box onClick={Back} sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', cursor: 'pointer', transition: 'all 0.3s ease', height: '100px' }} >
-
-                                        </Box>
-                                    }
+                                        <Typography variant='h3' sx={{ fontFamily: 'Montserrat', fontSize: '24px', lineHeight: '29.26px', fontWeight: 700, color: '#413C58', textAlign: 'center', mt: 2 }} >
+                                            BNBchain
+                                        </Typography>
+                                    </Box>
                                 </Grid>
                             </Grid>
                         </Box>
