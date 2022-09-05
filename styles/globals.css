@@ -18,7 +18,10 @@ a {
   background-repeat: no-repeat;
 }
 #Tokenomeme,
-#Laugh_To_Earn {
+#Laugh_To_Earn,
+#Multichain_Meme_Coin,
+#Multichain_Troll_Dao,
+#Meme_NFT_Marketplace {
   background-image: url("/backgrounds/Tokenomeme.jpg");
   background-size: 100% 100%;
   background-position: center;
@@ -26,6 +29,15 @@ a {
 }
 #Laugh_To_Earn {
   background-image: url("/backgrounds/Laugh_To_Earn.jpg");
+}
+#Multichain_Meme_Coin {
+  background-image: url("/backgrounds/Multichain_Meme_Coin.jpg");
+}
+#Multichain_Troll_Dao {
+  background-image: url("/backgrounds/Multichain_Troll_Dao.jpg");
+}
+#Meme_NFT_Marketplace {
+  background-image: url("/backgrounds/Meme_NFT_Marketplace.jpg");
 }
 #Tablet {
   background-image: url("/backgrounds/tablet.jpg");
@@ -43,11 +55,15 @@ a {
   background-clip: padding-box, border-box !important;
   overflow: hidden !important;
 }
-.AddBorderToCard {
+.AddBorderToCard,
+.FlipCard {
   border-radius: 4px !important;
   border: double 3px transparent !important;
   background-image: linear-gradient(white, white),
     linear-gradient(to right top, #823aff, #ffe500, #fb8e00) !important;
   background-origin: border-box !important;
   background-clip: padding-box, border-box !important;
+}
+.FlipCard {
+  border-radius: 9px !important;
 }

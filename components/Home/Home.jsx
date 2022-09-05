@@ -13,6 +13,9 @@ import MenuItem from "@mui/material/MenuItem";
 import MenuList from "@mui/material/MenuList";
 import TokenomemeDialog from '../Dialogs/Tokenomeme';
 import Laugh_To_EarnDialog from '../Dialogs/Laugh-To-Earn';
+import Multichain_Meme_Coin_Dialog from '../Dialogs/Multichain_Meme_Coin';
+import Multichain_Troll_Dao_Dialog from '../Dialogs/Multichain_Troll_Dao';
+import Meme_NFT_Marketplace_Dialog from '../Dialogs/Meme_NFT_Marketplace';
 
 
 function Home() {
@@ -35,6 +38,15 @@ function Home() {
             case 'Laugh_To_Earn':
                 handleClickLaugh_To_Earn();
                 break;
+            case 'Multichain_Meme_Coin':
+                handleClickMultichain_Meme_Coin();
+                break;
+            case 'Multichain_Troll_Dao':
+                handleClickMultichain_Troll_Dao();
+                break
+            case 'Meme_NFT_Marketplace':
+                handleClickMeme_NFT_Marketplace();
+                break
 
             default:
                 break;
@@ -72,6 +84,20 @@ function Home() {
         setLaugh_To_Earn(true);
     };
 
+    const [Multichain_Meme_Coin, setMultichain_Meme_Coin] = React.useState(false);
+    const handleClickMultichain_Meme_Coin = () => {
+        setMultichain_Meme_Coin(true);
+    };
+
+    const [Multichain_Troll_Dao, setMultichain_Troll_Dao] = React.useState(false);
+    const handleClickMultichain_Troll_Dao = () => {
+        setMultichain_Troll_Dao(true);
+    };
+
+    const [Meme_NFT_Marketplace, setMeme_NFT_Marketplace] = React.useState(false);
+    const handleClickMeme_NFT_Marketplace = () => {
+        setMeme_NFT_Marketplace(true);
+    };
 
 
     return (
@@ -119,9 +145,9 @@ function Home() {
                                             >
                                                 <MenuItem sx={{ fontFamily: 'Montserrat', fontSize: '16px', lineHeight: '19.5px', fontWeight: 500, color: '#413C58' }} onClick={(e) => handleClose(e, 'Tokenomeme')}>Tokenomeme</MenuItem>
                                                 <MenuItem sx={{ fontFamily: 'Montserrat', fontSize: '16px', lineHeight: '19.5px', fontWeight: 500, color: '#413C58' }} onClick={(e) => handleClose(e, 'Laugh_To_Earn')}>Laugh-To-Earn</MenuItem>
-                                                <MenuItem sx={{ fontFamily: 'Montserrat', fontSize: '16px', lineHeight: '19.5px', fontWeight: 500, color: '#413C58' }} onClick={(e) => handleClose(e, '')}>Multichain Meme Coin</MenuItem>
-                                                <MenuItem sx={{ fontFamily: 'Montserrat', fontSize: '16px', lineHeight: '19.5px', fontWeight: 500, color: '#413C58' }} onClick={(e) => handleClose(e, '')}>Multichain Troll Dao </MenuItem>
-                                                <MenuItem sx={{ fontFamily: 'Montserrat', fontSize: '16px', lineHeight: '19.5px', fontWeight: 500, color: '#413C58' }} onClick={(e) => handleClose(e, '')}>Meme NFT Marketplace </MenuItem>
+                                                <MenuItem sx={{ fontFamily: 'Montserrat', fontSize: '16px', lineHeight: '19.5px', fontWeight: 500, color: '#413C58' }} onClick={(e) => handleClose(e, 'Multichain_Meme_Coin')}>Multichain Meme Coin</MenuItem>
+                                                <MenuItem sx={{ fontFamily: 'Montserrat', fontSize: '16px', lineHeight: '19.5px', fontWeight: 500, color: '#413C58' }} onClick={(e) => handleClose(e, 'Multichain_Troll_Dao')}>Multichain Troll Dao </MenuItem>
+                                                <MenuItem sx={{ fontFamily: 'Montserrat', fontSize: '16px', lineHeight: '19.5px', fontWeight: 500, color: '#413C58' }} onClick={(e) => handleClose(e, 'Meme_NFT_Marketplace')}>Meme NFT Marketplace </MenuItem>
                                                 <MenuItem sx={{ fontFamily: 'Montserrat', fontSize: '16px', lineHeight: '19.5px', fontWeight: 500, color: '#413C58' }} onClick={(e) => handleClose(e, '')}>Memeology420</MenuItem>
                                                 <MenuItem sx={{ fontFamily: 'Montserrat', fontSize: '16px', lineHeight: '19.5px', fontWeight: 500, color: '#413C58' }} onClick={(e) => handleClose(e, '')}>Video Presentation</MenuItem>
                                                 <MenuItem sx={{ fontFamily: 'Montserrat', fontSize: '16px', lineHeight: '19.5px', fontWeight: 500, color: '#413C58' }} onClick={(e) => handleClose(e, '')}>Chinkies NFT collection</MenuItem>
@@ -176,10 +202,12 @@ function Home() {
             </Box>
 
 
-            {/* Dialog tokenomeme */}
+            {/* Dialogs */}
             <TokenomemeDialog Tokenomeme={Tokenomeme} setTokenomeme={setTokenomeme} />
-
             <Laugh_To_EarnDialog Laugh_To_Earn={Laugh_To_Earn} setLaugh_To_Earn={setLaugh_To_Earn} />
+            <Multichain_Meme_Coin_Dialog Multichain_Meme_Coin={Multichain_Meme_Coin} setMultichain_Meme_Coin={setMultichain_Meme_Coin} />
+            <Multichain_Troll_Dao_Dialog Multichain_Troll_Dao={Multichain_Troll_Dao} setMultichain_Troll_Dao={setMultichain_Troll_Dao} />
+            <Meme_NFT_Marketplace_Dialog Meme_NFT_Marketplace={Meme_NFT_Marketplace} setMeme_NFT_Marketplace={setMeme_NFT_Marketplace} />
         </>
     )
 }
