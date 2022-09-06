@@ -7,6 +7,8 @@ import Slide from '@mui/material/Slide';
 import CloseIcon from '@mui/icons-material/Close';
 import IconButton from '@mui/material/IconButton';
 import Grid from '@mui/material/Grid';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
 
 
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -16,6 +18,9 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 
 function Multichain_Troll_Dao({ Multichain_Troll_Dao, setMultichain_Troll_Dao }) {
+
+    const theme = useTheme();
+    const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
 
     return (
         <>
@@ -30,28 +35,28 @@ function Multichain_Troll_Dao({ Multichain_Troll_Dao, setMultichain_Troll_Dao })
                     style: { borderRadius: '14px' }
                 }}
             >
-                <Box className='AddBorder' sx={{ width: '1141px', height: '636px', position: 'relative', overflow: 'hidden' }} >
-                    <Box id='Multichain_Troll_Dao' sx={{ width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }} >
+                <Box className='AddBorder' sx={{ width: { md: '1141px', xs: '100%' }, height: { md: '636px' }, position: 'relative', overflow: { md: 'hidden', xs: 'auto' } }} >
+                    <Box id='Multichain_Troll_Dao' sx={{ width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column',px:3,py:6 }} >
                         {/* cross button */}
                         <IconButton onClick={() => setMultichain_Troll_Dao(false)} aria-label="CloseIcon" sx={{ position: 'absolute', right: '6px', top: '6px' }} >
                             <CloseIcon sx={{ color: '#211E1E', fontSize: '24px' }} />
                         </IconButton>
 
                         {/* Dog Gif */}
-                        <Box sx={{ position: 'absolute', left: '0px', top: '0px', }} >
+                        <Box sx={{ position: 'absolute', left: '0px', top: '0px',display:{md:'block',xs:'none'} }} >
                             <Image src={'/svg/dogIco.svg'} width={99} height={99} objectFit='contain' />
                         </Box>
 
                         {/* trollFace */}
-                        <Box sx={{ position: 'absolute', right: '50px', top: '23px', }} >
+                        <Box sx={{ position: 'absolute', right: '50px', top: '23px',display:{md:'block',xs:'none'} }} >
                             <Image src={'/svg/dance.svg'} width={80} height={99} objectFit='contain' />
                         </Box>
 
                         {/* main Content */}
-                        <Typography variant='h3' sx={{ fontFamily: 'Montserrat', fontSize: '40px', lineHeight: '48.76px', fontWeight: 800, color: '#413C58' }} >
+                        <Typography variant='h3' sx={{ fontFamily: 'Montserrat', fontSize: {md:'40px',xs:'30px'}, lineHeight: '48.76px', fontWeight: 800, color: '#413C58',textAlign:'center' }} >
                             Multichain Troll Dao
                         </Typography>
-                        <Typography variant='h3' sx={{ fontFamily: 'Montserrat', fontSize: '28px', lineHeight: '34.13px', fontWeight: 500, color: '#823AFF', my: 2 }} >
+                        <Typography variant='h3' sx={{ fontFamily: 'Montserrat', fontSize: '28px', lineHeight: '34.13px', fontWeight: 500, color: '#823AFF',textAlign:'center', my: 2 }} >
                             Join our meme DAO federation!
                         </Typography>
                         <Typography variant='h3' sx={{ fontFamily: 'Lato', fontSize: '18px', lineHeight: '24.3px', fontWeight: 400, color: '#211E1E', textAlign: 'center', maxWidth: '800px' }} >

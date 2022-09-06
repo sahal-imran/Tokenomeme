@@ -7,6 +7,8 @@ import Slide from '@mui/material/Slide';
 import CloseIcon from '@mui/icons-material/Close';
 import IconButton from '@mui/material/IconButton';
 import Grid from '@mui/material/Grid';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
 
 
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -17,6 +19,8 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 function Multichain_Meme_Coin({ Multichain_Meme_Coin, setMultichain_Meme_Coin }) {
 
+    const theme = useTheme();
+    const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
 
     return (
         <>
@@ -31,25 +35,25 @@ function Multichain_Meme_Coin({ Multichain_Meme_Coin, setMultichain_Meme_Coin })
                     style: { borderRadius: '14px' }
                 }}
             >
-                <Box className='AddBorder' sx={{ width: '1141px', height: '636px', position: 'relative', overflow: 'hidden' }} >
-                    <Box id='Multichain_Meme_Coin' sx={{ width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }} >
+                <Box className='AddBorder' sx={{width: { md: '1141px', xs: '100%' }, height: { md: '636px' }, position: 'relative', overflow: 'hidden' }} >
+                    <Box id='Multichain_Meme_Coin' sx={{ width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column',px:3,py:6 }} >
                         {/* cross button */}
                         <IconButton onClick={() => setMultichain_Meme_Coin(false)} aria-label="CloseIcon" sx={{ position: 'absolute', right: '6px', top: '6px' }} >
                             <CloseIcon sx={{ color: '#211E1E', fontSize: '24px' }} />
                         </IconButton>
 
                         {/* Dog Gif */}
-                        <Box sx={{ position: 'absolute', left: '0px', bottom: '0px', }} >
+                        <Box sx={{ position: 'absolute', left: '0px', bottom: '0px',display:{md:'block',xs:'none'} }} >
                             <Image src={'/svg/cat.svg'} width={88} height={121} objectFit='contain' />
                         </Box>
 
                         {/* trollFace */}
-                        <Box sx={{ position: 'absolute', right: '0px', bottom: '0px', }} >
+                        <Box sx={{ position: 'absolute', right: '0px', bottom: '0px',display:{md:'block',xs:'none'} }} >
                             <Image src={'/svg/simpson.svg'} width={154} height={154} objectFit='contain' />
                         </Box>
 
                         {/* main Content */}
-                        <Typography variant='h3' sx={{ fontFamily: 'Montserrat', fontSize: '40px', lineHeight: '48.76px', fontWeight: 800, color: '#413C58' }} >
+                        <Typography variant='h3' sx={{ fontFamily: 'Montserrat', fontSize: {md:'40px',xs:'30px'}, lineHeight: '48.76px', fontWeight: 800, color: '#413C58',textAlign:'center' }} >
                             Multichain Meme Coin
                         </Typography>
                         <Typography variant='h3' sx={{ fontFamily: 'Montserrat', fontSize: '28px', lineHeight: '34.13px', fontWeight: 500, color: '#823AFF', my: 2 }} >
@@ -61,7 +65,7 @@ function Multichain_Meme_Coin({ Multichain_Meme_Coin, setMultichain_Meme_Coin })
                             It’s scalable – like your mom. But for now, she’s playing<br /> hard to get.
                         </Typography>
 
-                        <Box sx={{mt:8}} >
+                        <Box sx={{ mt: 8 }} >
                             <Image src={'/svg/multichain_map.svg'} width={748} height={255} objectFit='contain' />
                         </Box>
 

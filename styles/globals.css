@@ -12,7 +12,7 @@ a {
   text-decoration: none;
 }
 #Home {
-  background-image: url("/backgrounds/Home.jpg");
+  background-image: url("/backgrounds/background.png");
   background-size: 100vw 100vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -23,11 +23,13 @@ a {
 #Multichain_Troll_Dao,
 #Meme_NFT_Marketplace,
 #Memeology420,
-#Video_Presentation {
+#Video_Presentation,
+#Slider {
   background-image: url("/backgrounds/Tokenomeme.jpg");
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
+  object-fit: fill;
 }
 #Laugh_To_Earn {
   background-image: url("/backgrounds/Laugh_To_Earn.jpg");
@@ -47,6 +49,12 @@ a {
 #Video_Presentation {
   background-image: url("/backgrounds/Video_Presentation.png");
 }
+#Slider {
+  background-image: url("/backgrounds/slider.jpg");
+}
+#SliderNFT {
+  background-image: url("/backgrounds/SliderNFT.jpg");
+}
 #Tablet {
   background-image: url("/backgrounds/tablet.jpg");
   background-size: 100% 100%;
@@ -61,16 +69,12 @@ a {
     linear-gradient(to right top, #823aff, #ffe500, #fb8e00) !important;
   background-origin: border-box !important;
   background-clip: padding-box, border-box !important;
-  overflow: hidden !important;
 }
 .AddBorderToCard,
 .FlipCard {
   border-radius: 4px !important;
   border: double 3px transparent !important;
-  background-image: linear-gradient(
-      rgb(255, 255, 255),
-      rgb(255, 255, 255)
-    ),
+  background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)),
     linear-gradient(to right top, #823aff, #ffe500, #fb8e00) !important;
   background-origin: border-box !important;
   background-clip: padding-box, border-box !important;
@@ -86,9 +90,31 @@ a {
     linear-gradient(to right top, #823aff, #ffe500, #fb8e00) !important;
 }
 .GradientText {
-  font-size: 35px;
-  font-weight: 800;
   background: -webkit-linear-gradient(236.69deg, #fb8e00 6.11%, #823aff 97.1%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+@media screen and (max-width: 900px) {
+  #Home {
+    background-size: cover !important;
+  }
+  .AddBorderToToken {
+    min-height: 100vh;
+  }
+  #Tokenomeme {
+    background-image: unset;
+    background-color: white;
+  }
 }

@@ -11,6 +11,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
@@ -30,12 +32,14 @@ const settings = {
             breakpoint: 600,
             settings: {
                 dots: false,
+                slidesToShow: 1,
             }
         },
         {
             breakpoint: 480,
             settings: {
                 dots: false,
+                slidesToShow: 1,
             }
         }
     ]
@@ -43,6 +47,9 @@ const settings = {
 
 
 function Tokenomeme({ Tokenomeme, setTokenomeme }) {
+
+    const theme = useTheme();
+    const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
 
     const slider = useRef();
 
@@ -52,7 +59,6 @@ function Tokenomeme({ Tokenomeme, setTokenomeme }) {
     const previous = () => {
         slider.current.slickPrev();
     };
-
 
     return (
         <>
@@ -67,9 +73,10 @@ function Tokenomeme({ Tokenomeme, setTokenomeme }) {
                 PaperProps={{
                     style: { borderRadius: '14px' }
                 }}
+                fullScreen={fullScreen}
             >
-                <Box className='AddBorder' sx={{ width: '1141px', height: '636px',position:'relative',overflow:'hidden'  }} >
-                    <Box id='Tokenomeme' sx={{ width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }} >
+                <Box className='AddBorder AddBorderToToken' sx={{ width: { md: '1141px', xs: '100%' }, height: { md: '636px' }, position: 'relative', overflow: 'hidden' }} >
+                    <Box id='Tokenomeme' sx={{ width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', px: 3, py: 10 }} >
                         {/* cross button */}
                         <IconButton onClick={() => setTokenomeme(false)} aria-label="CloseIcon" sx={{ position: 'absolute', right: '6px', top: '6px' }} >
                             <CloseIcon sx={{ color: '#211E1E', fontSize: '24px' }} />
@@ -85,7 +92,7 @@ function Tokenomeme({ Tokenomeme, setTokenomeme }) {
                         </Box>
 
                         {/* main Content */}
-                        <Typography variant='h3' sx={{ fontFamily: 'Montserrat', fontSize: '40px', lineHeight: '48.76px', fontWeight: 800, color: '#413C58' }} >
+                        <Typography variant='h3' sx={{ fontFamily: 'Montserrat', fontSize: {md:'40px',xs:'30px'}, lineHeight: '48.76px', fontWeight: 800, color: '#413C58' }} >
                             Tokenmeme
                         </Typography>
                         <Typography variant='h3' sx={{ fontFamily: 'Montserrat', fontSize: '28px', lineHeight: '34.13px', fontWeight: 500, color: '#823AFF' }} >
@@ -97,31 +104,39 @@ function Tokenomeme({ Tokenomeme, setTokenomeme }) {
                         </Typography>
 
                         {/* Tablet */}
-                        <Box id="Tablet" sx={{ width: '405.3px', height: '265.82px', mt: 2, display: 'flex', justifyContent: 'center', alignItems: 'center', }} >
-                            <Box sx={{ width: '340.53px', height: '245.35px', overflow: 'auto', "&::-webkit-scrollbar": { width: '0px' } }} >
+                        <Box id="Tablet" sx={{ width: { md: '405.3px', xs: '95%' }, height: '265.82px', mt: { md: 2, xs: 4 }, display: 'flex', justifyContent: 'center', alignItems: 'center', }} >
+                            <Box sx={{ width:{md:'340.53px',xs:'300px'}, height: {md:'245.35px',xs:'200px'}, overflow: 'auto', "&::-webkit-scrollbar": { width: '0px' } }} >
                                 <img src="/svg/Tablet/1.svg" alt="1" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                                 <img src="/svg/Tablet/1.svg" alt="1" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                                 <img src="/svg/Tablet/1.svg" alt="1" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                             </Box>
                         </Box>
 
-                        <Typography variant='h3' sx={{ fontFamily: 'Lato', fontSize: '22px', fontStyle: 'italic', lineHeight: '29.7pxx', fontWeight: 800, color: '#413C58', mt: 2 }} >
+                        <Typography variant='h3' sx={{ fontFamily: 'Lato', fontSize: '22px', fontStyle: 'italic', lineHeight: '29.7pxx', fontWeight: 800, color: '#413C58', mt: 4 }} >
                             Friends of Tokenomeme
                         </Typography>
 
-                        <Box sx={{ width: '700px', position: 'relative', mt: 3 }} >
+                        <Box sx={{ width: { md: '70%', xs: '90%' }, position: 'relative', mt: 3, }} >
                             <Slider ref={c => (slider.current = c)} {...settings}>
-                                <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} >
-                                    <Image src={'/Slider/Partners_logo/PepitePEIPs.svg'} width={267} height={80} objectFit='contain' />
+                                <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', ml: 1 }} >
+                                    <Box sx={{ width: '95%', display: 'flex', justifyContent: 'center', alignItems: 'center', background: '#000000', borderRadius: '4px' }} >
+                                        <Image src={'/Slider/Video_presentation/CoinRivet.svg'} width={127.34} height={65.89} objectFit='contain' />
+                                    </Box>
                                 </Box>
-                                <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} >
-                                    <Image src={'/Slider/Partners_logo/StrongerTogether.svg'} width={267} height={80} objectFit='contain' />
+                                <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', ml: 1 }} >
+                                    <Box sx={{ width: '95%', display: 'flex', justifyContent: 'center', alignItems: 'center', background: '#000000', borderRadius: '4px' }} >
+                                        <Image src={'/Slider/Video_presentation/cryptoDaily.svg'} width={170.99} height={65.89} objectFit='contain' />
+                                    </Box>
                                 </Box>
-                                <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} >
-                                    <Image src={'/Slider/Partners_logo/PepitePEIPs.svg'} width={267} height={80} objectFit='contain' />
+                                <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', ml: 1 }} >
+                                    <Box sx={{ width: '95%', display: 'flex', justifyContent: 'center', alignItems: 'center', background: '#000000', borderRadius: '4px' }} >
+                                        <Image src={'/Slider/Video_presentation/coinchapter.svg'} width={287.6} height={65.89} objectFit='contain' />
+                                    </Box>
                                 </Box>
-                                <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} >
-                                    <Image src={'/Slider/Partners_logo/StrongerTogether.svg'} width={267} height={80} objectFit='contain' />
+                                <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', ml: 1 }} >
+                                    <Box sx={{ width: '95%', display: 'flex', justifyContent: 'center', alignItems: 'center', background: '#000000', borderRadius: '4px' }} >
+                                        <Image src={'/Slider/Video_presentation/coinmarketleague.svg'} width={174.52} height={65.89} objectFit='contain' />
+                                    </Box>
                                 </Box>
                             </Slider>
                             <ArrowBackIosNewIcon onClick={() => previous()} sx={{

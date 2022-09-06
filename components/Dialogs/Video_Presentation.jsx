@@ -12,6 +12,8 @@ import "slick-carousel/slick/slick-theme.css";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ReactPlayer from 'react-player';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
 
 
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -32,12 +34,16 @@ const settings = {
             breakpoint: 600,
             settings: {
                 dots: false,
+                slidesToShow: 1,
+
             }
         },
         {
             breakpoint: 480,
             settings: {
                 dots: false,
+                slidesToShow: 1,
+
             }
         }
     ]
@@ -46,6 +52,9 @@ const settings = {
 
 
 function Video_Presentation({ Video_Presentation, setVideo_Presentation }) {
+
+    const theme = useTheme();
+    const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
 
     const slider = useRef();
 
@@ -69,23 +78,23 @@ function Video_Presentation({ Video_Presentation, setVideo_Presentation }) {
                     style: { borderRadius: '14px' }
                 }}
             >
-                <Box className='AddBorder' sx={{ width: '1141px', height: '636px', position: 'relative', overflow: 'hidden' }} >
-                    <Box id='Video_Presentation' sx={{ width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }} >
+                <Box className='AddBorder' sx={{ width: { md: '1141px', xs: '100%' }, height: { md: '636px' }, position: 'relative', overflow: 'hidden' }} >
+                    <Box id='Video_Presentation' sx={{ width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', px: 3, py: 6 }} >
                         {/* cross button */}
                         <IconButton onClick={() => setVideo_Presentation(false)} aria-label="CloseIcon" sx={{ position: 'absolute', right: '6px', top: '6px' }} >
                             <CloseIcon sx={{ color: '#211E1E', fontSize: '24px' }} />
                         </IconButton>
 
-                        <Box sx={{ position: 'absolute', left: '0px', bottom: '-16px', }} >
+                        <Box sx={{ position: 'absolute', left: '0px', bottom: '-16px', display: { md: 'block', xs: 'none' } }} >
                             <Image src={'/gif/kyet.gif'} width={121.27} height={143.93} objectFit='contain' />
                         </Box>
 
                         {/* main Content */}
-                        <Typography variant='h3' sx={{ fontFamily: 'Lato', fontSize: '35px', lineHeight: '42px', fontWeight: 400, textAlign: 'center', fontStyle: 'italic' }} className="GradientText" >
+                        <Typography variant='h3' sx={{ fontFamily: 'Lato', fontSize: '35px', lineHeight: '42px', fontWeight: 800, textAlign: 'center', fontStyle: 'italic' }} className="GradientText" >
                             As Seen in
                         </Typography>
 
-                        <Box sx={{ width: '80%', position: 'relative', mt: 3, }} >
+                        <Box sx={{ width: { md: '80%', xs: '90%' }, position: 'relative', mt: 3, }} >
                             <Slider ref={c => (slider.current = c)} {...settings}>
                                 <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', ml: 1 }} >
                                     <Box sx={{ width: '95%', display: 'flex', justifyContent: 'center', alignItems: 'center', background: '#000000', borderRadius: '4px' }} >
@@ -122,14 +131,14 @@ function Video_Presentation({ Video_Presentation, setVideo_Presentation }) {
                             }} />
                         </Box>
 
-                        <Box sx={{ width: '100%', position: 'relative', overflow: 'hidden', display: 'flex', justifyContent: 'center', alignItems: 'center', background: 'transparent',mt:3 }} >
-                            <Box className='player-wrapper' sx={{ width: '60%', height: '370px', background: "transparent",borderRadius:'8px',overflow:'hidden' }} >
+                        <Box sx={{ width: '100%', position: 'relative', overflow: 'hidden', display: 'flex', justifyContent: 'center', alignItems: 'center', background: 'transparent', mt: 3 }} >
+                            <Box className='player-wrapper' sx={{ width: { md: '60%', xs: '90%' }, height: { md: '370px', xs: '200px' }, background: "transparent", borderRadius: '8px', overflow: 'hidden' }} >
                                 <ReactPlayer
                                     className='react-player'
                                     url='https://youtu.be/7Yve8g524lo'
                                     width='100%'
                                     height='100%'
-                                    controls = {true}
+                                    controls={true}
                                 />
                             </Box>
                         </Box>

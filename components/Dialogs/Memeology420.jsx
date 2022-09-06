@@ -13,6 +13,8 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { Button } from '@mui/material';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
 
 
 
@@ -24,6 +26,9 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 
 function Memeology420({ Memeology420, setMemeology420 }) {
+
+    const theme = useTheme();
+    const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
 
     const [isFlipped, Set_Flipped] = useState(false);
 
@@ -92,20 +97,20 @@ function Memeology420({ Memeology420, setMemeology420 }) {
                     style: { borderRadius: '14px' }
                 }}
             >
-                <Box className='AddBorder' sx={{ width: '1141px', height: '636px', position: 'relative', overflow: 'hidden' }} >
-                    <Box id='Memeology420' sx={{ width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }} >
+                <Box className='AddBorder' sx={{ width: { md: '1141px', xs: '100%' }, height: { md: '636px' }, position: 'relative', overflow: { md: 'hidden', xs: 'auto' } }} >
+                    <Box id='Memeology420' sx={{ width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', px: 3, py: 6 }} >
                         {/* cross button */}
                         <IconButton onClick={() => setMemeology420(false)} aria-label="CloseIcon" sx={{ position: 'absolute', right: '6px', top: '6px' }} >
                             <CloseIcon sx={{ color: '#211E1E', fontSize: '24px' }} />
                         </IconButton>
 
                         {/* Dog Gif */}
-                        <Box sx={{ position: 'absolute', left: '0px', top: '0px', }} >
+                        <Box sx={{ position: 'absolute', left: '0px', top: '0px', display: { md: 'block', xs: 'none' } }} >
                             <Image src={'/svg/ranatigrena2.svg'} width={172} height={123} objectFit='contain' />
                         </Box>
 
                         {/* main Content */}
-                        <Typography variant='h3' sx={{ fontFamily: 'Montserrat', fontSize: '40px', lineHeight: '48.76px', fontWeight: 800, color: '#413C58' }} >
+                        <Typography variant='h3' sx={{ fontFamily: 'Montserrat', fontSize: {md:'40px',xs:'30px'}, lineHeight: '48.76px', fontWeight: 800, color: '#413C58' }} >
                             Memeology420
                         </Typography>
                         <Typography variant='h3' sx={{ fontFamily: 'Lato', fontSize: '18px', lineHeight: '24.3px', fontWeight: 400, color: '#211E1E', textAlign: 'center', maxWidth: '800px', mt: 1 }} >
@@ -117,7 +122,7 @@ function Memeology420({ Memeology420, setMemeology420 }) {
                         </Button>
 
                         <Box sx={{ flexGrow: 1, width: '80%', mt: 8, maxHeight: { md: '300px' } }}>
-                            <Grid container columnSpacing={0} rowSpacing={{ md: 0, xs: 4 }} columns={{ md: 15 }}>
+                            <Grid container columnSpacing={3} rowSpacing={{ md: 0, xs: 4 }} columns={{ md: 15,xs:12 }}>
                                 <Grid item xs={12} md={3}>
                                     <ReactCardFlip isFlipped={Flip_One_Card} flipDirection="horizontal">
                                         {/* Front */}

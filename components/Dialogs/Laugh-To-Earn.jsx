@@ -8,6 +8,8 @@ import CloseIcon from '@mui/icons-material/Close';
 import IconButton from '@mui/material/IconButton';
 import Grid from '@mui/material/Grid';
 import Laugh_To_Earn_Card from '../Common/Laugh_To_Earn_Card';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
 
 
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -42,6 +44,8 @@ const settings = {
 
 function Laugh_To_Earn({ Laugh_To_Earn, setLaugh_To_Earn }) {
 
+    const theme = useTheme();
+    const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
 
     return (
         <>
@@ -57,33 +61,33 @@ function Laugh_To_Earn({ Laugh_To_Earn, setLaugh_To_Earn }) {
                     style: { borderRadius: '14px' }
                 }}
             >
-                <Box className='AddBorder' sx={{ width: '1141px', height: '636px', position: 'relative', overflow: 'hidden' }} >
-                    <Box id='Laugh_To_Earn' sx={{ width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }} >
+                <Box className='AddBorder' sx={{ width: { md: '1141px', xs: '100%' }, height: { md: '636px' }, position: 'relative', overflow:{md:'hidden',xs:'auto'} }} >
+                    <Box id='Laugh_To_Earn' sx={{ width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column',px:4,py:6 }} >
                         {/* cross button */}
                         <IconButton onClick={() => setLaugh_To_Earn(false)} aria-label="CloseIcon" sx={{ position: 'absolute', right: '6px', top: '6px' }} >
                             <CloseIcon sx={{ color: '#211E1E', fontSize: '24px' }} />
                         </IconButton>
 
                         {/* Dog Gif */}
-                        <Box sx={{ position: 'absolute', left: '-20px', bottom: '-20px', }} >
+                        <Box sx={{ position: 'absolute', left: '-20px', bottom: '-20px',display:{md:'block',xs:'none'} }} >
                             <Image src={'/gif/DogeEnterOut.gif'} width={100} height={100} objectFit='contain' />
                         </Box>
 
                         {/* trollFace */}
-                        <Box sx={{ position: 'absolute', right: '-30px', bottom: '-6px', }} >
+                        <Box sx={{ position: 'absolute', right: '-30px', bottom: '-6px',display:{md:'block',xs:'none'} }} >
                             <Image src={'/gif/simpson.gif'} width={167} height={120} objectFit='contain' />
                         </Box>
 
                         {/* Arrow */}
-                        <Box sx={{ position: 'absolute', right: '32%', top: '12%', }} >
+                        <Box sx={{ position: 'absolute', right: '32%', top: '12%',display:{md:'block',xs:'none'} }} >
                             <Image src={'/svg/Arrow.svg'} width={56.11} height={22.09} objectFit='contain' />
                         </Box>
 
                         {/* main Content */}
-                        <Typography variant='h3' sx={{ fontFamily: 'Montserrat', fontSize: '40px', lineHeight: '48.76px', fontWeight: 800, color: '#413C58' }} >
+                        <Typography variant='h3' sx={{ fontFamily: 'Montserrat', fontSize: {md:'40px',xs:'30px'}, lineHeight: '48.76px', fontWeight: 800, color: '#413C58',textAlign:'center' }} >
                             Laugh-To-Earn
                         </Typography>
-                        <Typography variant='h3' sx={{ fontFamily: 'Montserrat', fontSize: '28px', lineHeight: '34.13px', fontWeight: 500, color: '#823AFF', my: 2 }} >
+                        <Typography variant='h3' sx={{ fontFamily: 'Montserrat', fontSize: '28px', lineHeight: '34.13px', fontWeight: 500, color: '#823AFF', my: 2,textAlign:'center' }} >
                             Gamification & Play 2 earn for memes
                         </Typography>
                         <Typography variant='h3' sx={{ fontFamily: 'Lato', fontSize: '18px', lineHeight: '24.3px', fontWeight: 400, color: '#211E1E', textAlign: 'center', maxWidth: '800px' }} >
@@ -92,8 +96,8 @@ function Laugh_To_Earn({ Laugh_To_Earn, setLaugh_To_Earn }) {
                         </Typography>
 
                         {/* Cards */}
-                        <Box sx={{ flexGrow: 1, width: '80%', mt: 8, maxHeight: { md: '250px' } }}>
-                            <Grid container columnSpacing={0} rowSpacing={{ md: 0, xs: 4 }} columns={{ md: 15 }}>
+                        <Box sx={{ flexGrow: 1, width: { md: '80%', xs: '100%' }, mt: 8, maxHeight: { md: '250px' } }}>
+                            <Grid container columnSpacing={0} rowSpacing={{ md: 0, xs: 4 }} columns={{ md: 15,xs:12 }}>
                                 <Grid item xs={12} md={3}>
                                     <Laugh_To_Earn_Card Title={'Proof of Meme'} SubTitle={'Memes making'} ImgURL={'/Laugh_To_Earn/bone_soda.svg'} />
                                 </Grid>
