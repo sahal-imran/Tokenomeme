@@ -131,7 +131,7 @@ function MintYourChinkies({ MintYourChinkies, setMintYourChinkies }) {
                                 Mint your Chinkies
                             </Typography>
                             <Typography variant='h3' sx={{ fontFamily: 'Lato', fontSize: '18px', lineHeight: '24.3px', fontWeight: 400, color: '#211E1E', textAlign: 'center', maxWidth: '800px', my: 1 }} >
-                                A 6969 NFT collection of degenerative Chinkies. It’s the only way to<br /> become his bitch. Don't be a wimp, give up your freedom.
+                                A 6969 NFT collection of degenerative Chinkies. Its the only way to<br /> become his bitch. Don't be a wimp, give up your freedom.
                             </Typography>
                             <Typography variant='h3' sx={{ fontFamily: 'Lato', fontSize: '18px', lineHeight: '24.3px', fontWeight: 400, color: '#FB8E00', textAlign: 'center', maxWidth: '800px' }} >
                                 Price: 0.069 ETH + gas
