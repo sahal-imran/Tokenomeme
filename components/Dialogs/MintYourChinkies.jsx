@@ -127,11 +127,11 @@ function MintYourChinkies({ MintYourChinkies, setMintYourChinkies }) {
                         </Box>
 
                         <Box sx={{ width: { md: '60%', xs: '100%' }, height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', background: 'white', mt: { md: 0, xs: 8 }, pb: { md: 0, xs: 4 } }} >
-                            <Typography variant='h3' sx={{ fontFamily: 'Montserrat', fontSize: {md:'40px',xs:'30px'}, lineHeight: '48.76px', fontWeight: 800, color: '#413C58' }} >
+                            <Typography variant='h3' sx={{ fontFamily: 'Montserrat', fontSize: { md: '40px', xs: '30px' }, lineHeight: '48.76px', fontWeight: 800, color: '#413C58' }} >
                                 Mint your Chinkies
                             </Typography>
                             <Typography variant='h3' sx={{ fontFamily: 'Lato', fontSize: '18px', lineHeight: '24.3px', fontWeight: 400, color: '#211E1E', textAlign: 'center', maxWidth: '800px', my: 1 }} >
-                                A 6969 NFT collection of degenerative Chinkies. Its the only way to<br /> become his bitch. Don't be a wimp, give up your freedom.
+                                {`A 6969 NFT collection of degenerative Chinkies. Its the only way to<br /> become his bitch. Don't be a wimp, give up your freedom.`}
                             </Typography>
                             <Typography variant='h3' sx={{ fontFamily: 'Lato', fontSize: '18px', lineHeight: '24.3px', fontWeight: 400, color: '#FB8E00', textAlign: 'center', maxWidth: '800px' }} >
                                 Price: 0.069 ETH + gas
