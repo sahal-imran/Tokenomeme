@@ -269,7 +269,7 @@ function Home() {
                 </Box>
 
                 {/* Sleeping dog */}
-                <Box sx={{ position: 'absolute', left: '26%', bottom: '28%', cursor: 'pointer', display: { md: 'block', xs: 'none' } }} >
+                <Box sx={{ position: 'absolute', left: '26%', bottom: '28%', display: { md: 'block', xs: 'none' } }} >
                     <Image src={'/gif/sleepingDog.gif'} width={200} height={100} objectFit='contain' />
                 </Box>
 
@@ -279,48 +279,48 @@ function Home() {
                 </Box>
 
                 {/* Carprt */}
-                <Box onClick={handleClickMultichain_Meme_Coin} sx={{ position: 'absolute', left: '20%', bottom: '0', cursor: 'pointer', display: { md: 'block', xs: 'none' } }} >
+                <Box onClick={handleClickMultichain_Meme_Coin} sx={{ position: 'absolute', left: '20%', bottom: '0', cursor: 'pointer', display: { md: 'block', xs: 'none' }, opacity: 0 }} >
                     <Image src={'/backgrounds/carpet.png'} width={1000} height={220} objectFit='contain' />
                 </Box>
 
                 {/* Book */}
-                <Box onClick={handleClickMemeology420} sx={{ position: 'absolute', left: '25%', bottom: '3%', cursor: 'pointer', display: { md: 'block', xs: 'none' } }} >
+                <Box onClick={handleClickMemeology420} sx={{ position: 'absolute', left: '25%', bottom: '3%', cursor: 'pointer', display: { md: 'block', xs: 'none' }, opacity: 0 }} >
                     <Image src={'/backgrounds/book-open.png'} width={205} height={105} objectFit='contain' />
                 </Box>
 
                 {/* table */}
-                <Box onClick={handleClickMultichain_Troll_Dao} sx={{ position: 'absolute', left: '47%', bottom: '3%', cursor: 'pointer', display: { md: 'block', xs: 'none' } }} >
+                <Box onClick={handleClickMultichain_Troll_Dao} sx={{ position: 'absolute', left: '47%', bottom: '3%', cursor: 'pointer', display: { md: 'block', xs: 'none' }, opacity: 0 }} >
                     <Image src={'/backgrounds/table.png'} width={300} height={220} objectFit='contain' />
                 </Box>
 
                 {/* sofa */}
-                <Box sx={{ position: 'absolute', right: '0%', bottom: '0', display: { md: 'block', xs: 'none' } }} >
+                <Box sx={{ position: 'absolute', right: '0%', bottom: '0', display: { md: 'block', xs: 'none' }, opacity: 0 }} >
                     <Image src={'/backgrounds/sofa.png'} width={440} height={360} objectFit='contain' />
                 </Box>
 
                 {/* laptop */}
-                <Box onClick={handleClickTokenomeme} sx={{ position: 'absolute', right: '19%', bottom: '28.5%', display: { md: 'block', xs: 'none' }, cursor: 'pointer' }} >
+                <Box onClick={handleClickTokenomeme} sx={{ position: 'absolute', right: '19%', bottom: '28.5%', display: { md: 'block', xs: 'none' }, cursor: 'pointer', opacity: 0 }} >
                     <Image src={'/backgrounds/laptop.png'} width={100.5} height={39.5} objectFit='contain' />
                 </Box>
 
                 {/* hole */}
-                <Box onClick={handleClickMintYourChinkies} sx={{ position: 'absolute', right: '17%', bottom: '22%', display: { md: 'block', xs: 'none' }, cursor: 'pointer' }} >
+                <Box onClick={handleClickMintYourChinkies} sx={{ position: 'absolute', right: '17%', bottom: '22%', display: { md: 'block', xs: 'none' }, cursor: 'pointer', opacity: 0 }} >
                     <Image src={'/backgrounds/hole.png'} width={80} height={80} objectFit='contain' />
                 </Box>
 
                 {/* tv */}
-                <Box onClick={handleClickVideo_Presentation} sx={{ position: 'absolute', left: '7%', bottom: '38.5%', display: { md: 'block', xs: 'none' }, cursor: 'pointer' }} >
+                <Box onClick={handleClickVideo_Presentation} sx={{ position: 'absolute', left: '7%', bottom: '38.5%', display: { md: 'block', xs: 'none' }, cursor: 'pointer', opacity: 0 }} >
                     <Image src={'/backgrounds/tv.png'} width={178} height={234} objectFit='fill' />
                 </Box>
 
                 {/* Left-painting */}
-                <Box onClick={handleClickMeme_NFT_Marketplace} sx={{ position: 'absolute', right: '1%', top: '1%', opacity: 1, display: { md: 'block', xs: 'none' }, cursor: 'pointer' }} >
+                <Box onClick={handleClickMeme_NFT_Marketplace} sx={{ position: 'absolute', right: '1%', top: '1%', opacity: 1, display: { md: 'block', xs: 'none' }, cursor: 'pointer', opacity: 0 }} >
                     <Image src={'/backgrounds/Left-painting.png'} width={300} height={300} objectFit='fill' />
                 </Box>
 
                 {/* right-painting */}
-                <Box onClick={handleClickChinkies_NFT_Collection} sx={{ position: 'absolute', left: '20%', top: '1%', opacity: 1, display: { md: 'block', xs: 'none' }, cursor: 'pointer' }} >
-                    <Image src={'/backgrounds/right-painting.png'} width={180} height={240} objectFit='fill' />
+                <Box onClick={handleClickChinkies_NFT_Collection} sx={{ position: 'absolute', left: '20%', top: '1%', opacity: 1, display: { md: 'block', xs: 'none' }, cursor: 'pointer', opacity: 0 }} >
+                    <Image src={'/backgrounds/right-painting.png'} width={130} height={240} objectFit='fill' />
                 </Box>
 
             </Box>

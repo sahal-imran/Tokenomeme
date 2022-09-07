@@ -12,7 +12,7 @@ a {
   text-decoration: none;
 }
 #Home {
-  background-image: url("/backgrounds/background.png");
+  background-image: url("/backgrounds/Home.jpg");
   background-size: 100vw 100vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -118,3 +118,4 @@ input[type="number"] {
     background-color: white;
   }
 }
+
